@@ -18,6 +18,11 @@ class Plane (nv: List[Double], ct: Double) {
     buf.toString()
   }
 
+  def +(that: Plane): Plane = {
+    new Plane((this.normalVector.coordinates, that.normalVector.coordinates).zipped.map(_ + _),
+      this.constantTerm + that.constantTerm)
+  }
+
   def getBasepoint(): Vector = {
     var basepointCoords = List.fill[Double](this.dimension)(0)
     val nonZeroIndex = firstNonzeroIndex()

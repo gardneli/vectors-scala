@@ -41,4 +41,13 @@ object Main extends App {
   s1.setItem(1, p5)
   println(s1)
 
+  s1.swapRows(1, 2)
+  println("Swapped 1 and 2\n" + s1)
+
+  s1.multiplyCoefficientAndRow(2, 3)
+  println("Multiplied 3rd equation by 2\n" + s1)
+
+  s1.addCoefficientTimesRowToRow(-2, 0, 1)
+  println("Added -2 * row 0 to row 1\n" + s1)
+
 }
