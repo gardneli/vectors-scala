@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/VectorsLearning.iml" filepath="$PROJECT_DIR$/VectorsLearning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.google.testsbt/com.google.testsbt.iml" filepath="$PROJECT_DIR$/com.google.testsbt/com.google.testsbt.iml" />
+    </modules>
+  </component>
+</project>

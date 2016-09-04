@@ -4,9 +4,6 @@
 
 object Main extends App {
   println("Testing lines and vectors!")
-  //val v1 = new Vector(List(1.0, 2, 3.0))
-  //val v2 = new Vector(List(3, 4, 5))
-  //println(v1 * v2)
 
   val l1 = new Line(List(4.046, 2.836), 1.21)
   val l2 = new Line(List(10.115, 7.09), 3.025)
