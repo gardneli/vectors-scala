@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ad25f5d-c312-4f38-9541-194ce457d215" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/com.google.testsbt/Main$.class" afterPath="$PROJECT_DIR$/out/production/com.google.testsbt/Main$.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.google.testsbt/src/LinearSystem.scala" afterPath="$PROJECT_DIR$/com.google.testsbt/src/LinearSystem.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.google.testsbt/src/Main.scala" afterPath="$PROJECT_DIR$/com.google.testsbt/src/Main.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.google.testsbt/src/Plane.scala" afterPath="$PROJECT_DIR$/com.google.testsbt/src/Plane.scala" />
     </list>
     <ignored path="VectorsLearning.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -500,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1473026413996</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added Gaussian elimination functions.">
+      <created>1473027920023</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1473027920023</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -514,7 +519,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5062992" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33030304" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33030304" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287879" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -575,7 +580,8 @@
     <MESSAGE value="Second." />
     <MESSAGE value="Adding planes.&#10;" />
     <MESSAGE value="Adding linear systems." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding linear systems." />
+    <MESSAGE value="Added Gaussian elimination functions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Gaussian elimination functions." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
