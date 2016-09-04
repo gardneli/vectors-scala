@@ -3,7 +3,7 @@
   */
 
 object Main extends App {
-  println("Testing lines and vectors!")
+  println("Testing systems of linear equations!")
 
   /*
   val l1 = new Line(List(4.046, 2.836), 1.21)
@@ -32,11 +32,13 @@ object Main extends App {
   val p5 = new Plane(List(-7.926, 8.625, -7.217), -7.952)
   val p6 = new Plane(List(-2.642, 2.875, -2.404), -2.443)
 
-  println("Parallel: " + p1.isPlaneParallel(p2))
-  println("Equal: " + p1.equals(p2))
-  println("Parallel: " + p3.isPlaneParallel(p4))
-  println("Equal: " + p3.equals(p4))
-  println("Parallel: " + p5.isPlaneParallel(p6))
-  println("Equal: " + p5.equals(p6))
+  val s1 = new LinearSystem(List(p1, p2, p3, p4))
+
+  println(s1)
+  println(s1.length())
+  println(s1.indicesOfFirstNonzeroTermsPerRow())
+
+  s1.setItem(1, p5)
+  println(s1)
 
 }

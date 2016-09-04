@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ad25f5d-c312-4f38-9541-194ce457d215" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/com.google.testsbt/src/LinearSystem.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/com.google.testsbt/Main$.class" afterPath="$PROJECT_DIR$/out/production/com.google.testsbt/Main$.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/com.google.testsbt/Main.class" afterPath="$PROJECT_DIR$/out/production/com.google.testsbt/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.google.testsbt/src/Main.scala" afterPath="$PROJECT_DIR$/com.google.testsbt/src/Main.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.google.testsbt/src/Plane.scala" afterPath="$PROJECT_DIR$/com.google.testsbt/src/Plane.scala" />
     </list>
     <ignored path="VectorsLearning.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +31,8 @@
       <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com.google.testsbt/src/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+            <state relative-caret-position="349">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -39,7 +41,7 @@
       <file leaf-file-name="Vector.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com.google.testsbt/src/Vector.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
+            <state relative-caret-position="1962">
               <caret line="109" column="3" selection-start-line="109" selection-start-column="3" selection-end-line="109" selection-end-column="3" />
               <folding />
             </state>
@@ -49,18 +51,28 @@
       <file leaf-file-name="Line.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com.google.testsbt/src/Line.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="540">
               <caret line="30" column="28" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Plane.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Plane.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com.google.testsbt/src/Plane.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+            <state relative-caret-position="234">
+              <caret line="31" column="78" selection-start-line="31" selection-start-column="78" selection-end-line="31" selection-end-column="78" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LinearSystem.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/com.google.testsbt/src/LinearSystem.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="32" column="74" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -82,6 +94,7 @@
         <option value="$PROJECT_DIR$/com.google.testsbt/src/Vector.scala" />
         <option value="$PROJECT_DIR$/com.google.testsbt/src/Line.scala" />
         <option value="$PROJECT_DIR$/com.google.testsbt/src/Main.scala" />
+        <option value="$PROJECT_DIR$/com.google.testsbt/src/LinearSystem.scala" />
         <option value="$PROJECT_DIR$/com.google.testsbt/src/Plane.scala" />
       </list>
     </option>
@@ -94,7 +107,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="66" />
+    <option name="x" value="75" />
     <option name="y" value="64" />
     <option name="width" value="1279" />
     <option name="height" value="735" />
@@ -486,7 +499,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="66" y="64" width="1279" height="735" extended-state="0" />
+    <frame x="75" y="64" width="1279" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -569,6 +582,38 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/com.google.testsbt/src/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.google.testsbt/src/Vector.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1962">
+          <caret line="109" column="3" selection-start-line="109" selection-start-column="3" selection-end-line="109" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.google.testsbt/src/Line.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.google.testsbt/src/Plane.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.google.testsbt/src/Main.scala">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
@@ -615,17 +660,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com.google.testsbt/src/Main.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com.google.testsbt/src/Vector.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
+        <state relative-caret-position="1962">
           <caret line="109" column="3" selection-start-line="109" selection-start-column="3" selection-end-line="109" selection-end-column="3" />
           <folding />
         </state>
@@ -633,16 +670,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/com.google.testsbt/src/Line.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="540">
           <caret line="30" column="28" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.google.testsbt/src/Main.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com.google.testsbt/src/Plane.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+        <state relative-caret-position="234">
+          <caret line="31" column="78" selection-start-line="31" selection-start-column="78" selection-end-line="31" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.google.testsbt/src/LinearSystem.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="32" column="74" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
           <folding />
         </state>
       </provider>

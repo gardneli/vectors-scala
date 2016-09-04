@@ -29,7 +29,7 @@ class Plane (nv: List[Double], ct: Double) {
 
   def firstNonzeroIndex(): Option[(Int, Double)] = {
     var nonZeroIndex = None: Option[(Int, Double)]
-    this.normalVector.coordinates.find(_ > threshold).foreach { i =>
+    this.normalVector.coordinates.find(math.abs(_) > threshold).foreach { i =>
       nonZeroIndex = Some((this.normalVector.coordinates.indexOf(i), i))
     }
     nonZeroIndex
