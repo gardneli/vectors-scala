@@ -9,6 +9,8 @@ class LinearSystem(eqns: List[Plane]) {
   // Check that the dimension of all the planes is the same
   require(planes.forall(p => p.dimension == this.dimension))
 
+  //require(this.length() >= this.dimension)
+
   def swapRows(row1: Int, row2: Int): Unit = {
     val tmpPlane = this.planes(row1)
     this.planes = this.planes.updated(row1, this.planes(row2))
@@ -31,27 +33,65 @@ class LinearSystem(eqns: List[Plane]) {
     planes.map(_.firstNonzeroIndex())
   }
 
-  override def toString: String = {
-      val buf = new StringBuilder
-      var i: Int = 0
-      buf.append("Linear System: \n")
-      while (i < this.length()) {
-        buf.append("Equation " + i.toString + " : " + this.planes(i) + "\n")
-        i += 1
+  def computeTriangularForm(): LinearSystem = {
+    val newSystem = new LinearSystem(this.planes)
+    // Rule 1: Swap with topmost nonzero coefficient
+    // Rule 2: Don't multiply coefficient by row
+    // Rule 3: Only add multiples of row to rows below
+
+    // Get first row with nonzero first coefficient
+    var i: Int = 0
+    while (i < (newSystem.length())) {
+      // Look for other row to swap with to obtain nonzero first coefficient
+      if (newSystem.planes(i).firstNonzeroIndex().getOrElse(-1, -1)._1 > i) {
+        var j: Int = i + 1
+        while (j < newSystem.length()) {
+          if (newSystem.planes(j).firstNonzeroIndex().getOrElse(-1, -1)._1 == i) {
+            newSystem.swapRows(i, j)
+            j = newSystem.length()
+          } else {
+            j += 1
+          }
+        }
       }
-      buf.toString()
+      // If next rows first nonzero coefficient is the same as the current rows, then multiply
+      // to make it zero
+      // Need to clear all rows below in the same column
+      var k: Int = i + 1
+      while ((k + 1) <= newSystem.length()) {
+        if (newSystem.planes(k).firstNonzeroIndex().getOrElse(-1, -1)._1 == i) {
+          val multiplier = -1 * newSystem.planes(k).normalVector.coordinates(i) / newSystem.planes(i).normalVector.coordinates(i)
+          newSystem.addCoefficientTimesRowToRow(multiplier, i, k)
+        }
+        k += 1
+      }
+    i += 1
   }
 
-  def length(): Int = {
-    this.planes.length
-  }
+  newSystem
+}
 
-  def getItem(i: Int): Plane = {
-    this.planes(i)
+override def toString: String = {
+  val buf = new StringBuilder
+  var i: Int = 0
+  buf.append("Linear System: \n")
+  while (i < this.length()) {
+    buf.append("Equation " + i.toString + " : " + this.planes(i) + "\n")
+    i += 1
   }
+  buf.toString()
+}
 
-  def setItem(i: Int, plane: Plane): Unit = {
-    this.planes = this.planes.updated(i, plane)
-  }
+def length(): Int = {
+  this.planes.length
+}
+
+def getItem(i: Int): Plane = {
+  this.planes(i)
+}
+
+def setItem(i: Int, plane: Plane): Unit = {
+  this.planes = this.planes.updated(i, plane)
+}
 
 }

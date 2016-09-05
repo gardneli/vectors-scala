@@ -2,6 +2,7 @@
   * Created by Lee on 9/3/2016.
   */
 
+
 object Main extends App {
   println("Testing systems of linear equations!")
 
@@ -24,7 +25,8 @@ object Main extends App {
   println("Lines are parallel: " + l5.isLineParallel(l6))
   println("Lines are equal: " + l5.equals(l6))
   */
-
+  /*
+  val p0 = new Plane(List(1, 2, 3), 5)
   val p1 = new Plane(List(-0.412, 3.806, 0.728), -3.46)
   val p2 = new Plane(List(1.03, -9.515, -1.82), 8.65)
   val p3 = new Plane(List(2.611, 5.528, 0.283), 4.6)
@@ -32,22 +34,45 @@ object Main extends App {
   val p5 = new Plane(List(-7.926, 8.625, -7.217), -7.952)
   val p6 = new Plane(List(-2.642, 2.875, -2.404), -2.443)
 
-  val s1 = new LinearSystem(List(p1, p2, p3, p4))
+  val s1 = new LinearSystem(List(p1, p2, p3))
 
   println(s1)
   println(s1.length())
   println(s1.indicesOfFirstNonzeroTermsPerRow())
 
-  s1.setItem(1, p5)
-  println(s1)
+  println("\nTriangular form: \n")
+  println(s1.computeTriangularForm())
+  */
 
-  s1.swapRows(1, 2)
-  println("Swapped 1 and 2\n" + s1)
+  val p1 = new Plane(List(1, 1, 1), 1)
+  val p2 = new Plane(List(0, 1, 1), 2)
 
-  s1.multiplyCoefficientAndRow(2, 3)
-  println("Multiplied 3rd equation by 2\n" + s1)
+  val s1 = new LinearSystem(List(p1, p2))
 
-  s1.addCoefficientTimesRowToRow(-2, 0, 1)
-  println("Added -2 * row 0 to row 1\n" + s1)
+  println("Initial system 1:\n" + s1)
+  println("Triangular form 1:\n" + s1.computeTriangularForm())
 
+  val p3 = new Plane(List(1, 1, 1), 1)
+  val p4= new Plane(List(1, 1, 1), 2)
+
+  val s2 = new LinearSystem(List(p3, p4))
+  println("Initial system 2:\n" + s2)
+  println("Triangular form 2:\n" + s2.computeTriangularForm())
+
+  val p5 = new Plane(List(1, 1, 1), 1)
+  val p6= new Plane(List(0, 1, 0), 2)
+  val p7 = new Plane(List(1, 1, -2), 3)
+  val p8 = new Plane(List(1, 0, -2), 2)
+
+  val s3 = new LinearSystem(List(p5, p6, p7, p8))
+  println("Initial system 3:\n" + s3)
+  println("Triangular form 3:\n" + s3.computeTriangularForm())
+
+  val p9 = new Plane(List(0, 1, 1), 1)
+  val p10= new Plane(List(1, -1, 1), 2)
+  val p11 = new Plane(List(1, 2, -5), 3)
+
+  val s4 = new LinearSystem(List(p9, p10, p11))
+  println("Initial system 4:\n" + s4)
+  println("Triangular form 4:\n" + s4.computeTriangularForm())
 }
