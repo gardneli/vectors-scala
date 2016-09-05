@@ -54,8 +54,6 @@ class LinearSystem(eqns: List[Plane]) {
           }
         }
       }
-      // If next rows first nonzero coefficient is the same as the current rows, then multiply
-      // to make it zero
       // Need to clear all rows below in the same column
       var k: Int = i + 1
       while ((k + 1) <= newSystem.length()) {
@@ -65,33 +63,45 @@ class LinearSystem(eqns: List[Plane]) {
         }
         k += 1
       }
-    i += 1
+      i += 1
+    }
+    newSystem
   }
 
-  newSystem
-}
-
-override def toString: String = {
-  val buf = new StringBuilder
-  var i: Int = 0
-  buf.append("Linear System: \n")
-  while (i < this.length()) {
-    buf.append("Equation " + i.toString + " : " + this.planes(i) + "\n")
-    i += 1
+  def computeRREF(): LinearSystem = {
+    val triangularForm = this.computeTriangularForm()
+    var i: Int = 0
+    while (i < math.min(triangularForm.length(), triangularForm.dimension)) {
+      if(triangularForm.planes(i).normalVector.coordinates(i) != 1 && triangularForm.planes(i).normalVector.coordinates(i) != 0){
+        val multiplier = 1 / triangularForm.planes(i).normalVector.coordinates(i)
+        triangularForm.multiplyCoefficientAndRow(multiplier, i)
+      }
+      i += 1
+    }
+    triangularForm
   }
-  buf.toString()
-}
 
-def length(): Int = {
-  this.planes.length
-}
+  override def toString: String = {
+    val buf = new StringBuilder
+    var i: Int = 0
+    buf.append("Linear System: \n")
+    while (i < this.length()) {
+      buf.append("Equation " + i.toString + " : " + this.planes(i) + "\n")
+      i += 1
+    }
+    buf.toString()
+  }
 
-def getItem(i: Int): Plane = {
-  this.planes(i)
-}
+  def length(): Int = {
+    this.planes.length
+  }
 
-def setItem(i: Int, plane: Plane): Unit = {
-  this.planes = this.planes.updated(i, plane)
-}
+  def getItem(i: Int): Plane = {
+    this.planes(i)
+  }
+
+  def setItem(i: Int, plane: Plane): Unit = {
+    this.planes = this.planes.updated(i, plane)
+  }
 
 }

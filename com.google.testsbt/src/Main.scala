@@ -51,6 +51,7 @@ object Main extends App {
 
   println("Initial system 1:\n" + s1)
   println("Triangular form 1:\n" + s1.computeTriangularForm())
+  println("RREF form 1:\n" + s1.computeRREF())
 
   val p3 = new Plane(List(1, 1, 1), 1)
   val p4= new Plane(List(1, 1, 1), 2)
@@ -58,15 +59,17 @@ object Main extends App {
   val s2 = new LinearSystem(List(p3, p4))
   println("Initial system 2:\n" + s2)
   println("Triangular form 2:\n" + s2.computeTriangularForm())
+  println("RREF form 2:\n" + s2.computeRREF())
 
   val p5 = new Plane(List(1, 1, 1), 1)
   val p6= new Plane(List(0, 1, 0), 2)
-  val p7 = new Plane(List(1, 1, -2), 3)
+  val p7 = new Plane(List(1, 1, -1), 3)
   val p8 = new Plane(List(1, 0, -2), 2)
 
   val s3 = new LinearSystem(List(p5, p6, p7, p8))
   println("Initial system 3:\n" + s3)
   println("Triangular form 3:\n" + s3.computeTriangularForm())
+  println("RREF form 3:\n" + s3.computeRREF())
 
   val p9 = new Plane(List(0, 1, 1), 1)
   val p10= new Plane(List(1, -1, 1), 2)
@@ -75,4 +78,5 @@ object Main extends App {
   val s4 = new LinearSystem(List(p9, p10, p11))
   println("Initial system 4:\n" + s4)
   println("Triangular form 4:\n" + s4.computeTriangularForm())
+  println("RREF form 4:\n" + s4.computeRREF())
 }
